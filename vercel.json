@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "buildCommand": "npm run build",
+    "regions": ["syd1"],
+    "headers": [
+      {
+        "source": "/meeting_icon.png",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=86400" }
+        ]
+      }
+    ],
+    "rewrites": [
+      { "source": "/home", "destination": "/" }
+    ]
+  }
