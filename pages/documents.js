@@ -14,10 +14,7 @@ export default function Documents() {
         <h1>📎 Strata Documents</h1>
         <ul>
           <li>
-            <a href="/notice.pdf" target="_blank" className="file-link">🏷 Annual Notice (PDF)</a>
-          </li>
-          <li>
-            <a href="/bylaws.pdf" target="_blank" className="file-link">📄 Building Bylaws</a>
+          <a href="/annual_notice.pdf" target="_blank" className="file-link">📄 Annual Notice (PDF)</a>
           </li>
         </ul>
       </main>
