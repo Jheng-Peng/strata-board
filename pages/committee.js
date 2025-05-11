@@ -1,18 +1,24 @@
+import Link from 'next/link';
+
 export default function Committee() {
-    const members = [
-      { name: "Alice Wong", role: "Chairperson" },
-      { name: "Ben Li", role: "Secretary" },
-      { name: "Chloe Zhang", role: "Treasurer" }
-    ];
-  
-    return (
-      <div style={{ padding: '2rem', fontFamily: 'Arial' }}>
+  return (
+    <div className="container">
+      <nav className="navbar">
+        <Link href="/about" className="menu-btn">About Us</Link>
+        <Link href="/committee" className="menu-btn">Committee</Link>
+        <Link href="/documents" className="menu-btn">Documents</Link>
+        <Link href="/contact" className="menu-btn">Contact</Link>
+      </nav>
+
+      <main className="main">
         <h1>👥 Committee Members</h1>
         <ul>
-          {members.map((m, index) => (
-            <li key={index}>{m.name} - {m.role}</li>
-          ))}
+          <li>Jane Smith – Chair</li>
+          <li>John Lee – Treasurer</li>
+          <li>Amy Zhao – Secretary</li>
+          <li>Michael Chen – Member</li>
         </ul>
-      </div>
-    );
-  }
+      </main>
+    </div>
+  );
+}

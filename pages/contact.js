@@ -1,29 +1,24 @@
-export default function ContactPage() {
-    return (
-      <div style={{ padding: "2rem", fontFamily: "Arial" }}>
-        <h1>Contact & Feedback</h1>
-  
-        <h2>🔍 View Notices (GET)</h2>
-        <form method="GET" action="/api/notices">
-          <label>View all notices:</label>
-          <br />
-          <button type="submit">Fetch Notices</button>
+import Link from 'next/link';
+
+export default function Contact() {
+  return (
+    <div className="container">
+      <nav className="navbar">
+        <Link href="/about" className="menu-btn">About Us</Link>
+        <Link href="/committee" className="menu-btn">Committee</Link>
+        <Link href="/documents" className="menu-btn">Documents</Link>
+        <Link href="/contact" className="menu-btn">Contact</Link>
+      </nav>
+
+      <main className="main">
+        <h1>📬 Contact Us</h1>
+        <form method="post" action="/api/contact">
+          <input type="text" name="name" placeholder="Your Name" required /><br />
+          <input type="email" name="email" placeholder="Your Email" required /><br />
+          <textarea name="message" placeholder="Your Message" rows="4" required></textarea><br />
+          <button type="submit" className="menu-btn">Submit</button>
         </form>
-  
-        <hr />
-  
-        <h2>🛠️ Submit Repair Request (POST)</h2>
-        <form method="POST" action="/api/echo">
-          <label>Name:</label>
-          <br />
-          <input type="text" name="name" required />
-          <br /><br />
-          <label>Issue:</label>
-          <br />
-          <textarea name="issue" rows="4" cols="40" required />
-          <br /><br />
-          <button type="submit">Submit Request</button>
-        </form>
-      </div>
-    );
-  }
+      </main>
+    </div>
+  );
+}

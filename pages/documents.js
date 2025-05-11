@@ -1,9 +1,26 @@
+import Link from 'next/link';
+
 export default function Documents() {
-    return (
-      <div style={{ padding: '2rem', fontFamily: 'Arial' }}>
-        <h1>📄 Documents</h1>
-        <p>This section will include meeting minutes, safety guides, and downloadable PDFs.</p>
-        <p>Example static asset: <a href="/meeting_icon.png" target="_blank">meeting_icon.png</a></p>
-      </div>
-    );
-  }
+  return (
+    <div className="container">
+      <nav className="navbar">
+        <Link href="/about" className="menu-btn">About Us</Link>
+        <Link href="/committee" className="menu-btn">Committee</Link>
+        <Link href="/documents" className="menu-btn">Documents</Link>
+        <Link href="/contact" className="menu-btn">Contact</Link>
+      </nav>
+
+      <main className="main">
+        <h1>📎 Strata Documents</h1>
+        <ul>
+          <li>
+            <a href="/notice.pdf" target="_blank" className="file-link">🏷 Annual Notice (PDF)</a>
+          </li>
+          <li>
+            <a href="/bylaws.pdf" target="_blank" className="file-link">📄 Building Bylaws</a>
+          </li>
+        </ul>
+      </main>
+    </div>
+  );
+}

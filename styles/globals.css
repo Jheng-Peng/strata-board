@@ -40,3 +40,74 @@ a {
     color-scheme: dark;
   }
 }
+body {
+  background-color: #f4ecd8; /* 护眼卡其色背景 */
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  gap: 1rem;
+  background-color: #fff8e1;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #ddd4b0;
+  width: 100%;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.menu-btn {
+  padding: 0.5rem 1rem;
+  background-color: #ffe7a0;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.menu-btn:hover {
+  background-color: #ffda73;
+  cursor: pointer;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  text-align: center;
+}
+.file-link {
+  color: #2c3e50;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.file-link:hover {
+  color: #c0392b;
+  cursor: pointer;
+}
+input, textarea {
+  padding: 0.5rem;
+  width: 300px;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
