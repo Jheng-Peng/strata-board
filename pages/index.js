@@ -9,6 +9,9 @@ export default function Home() {
         <Link href="/committee" className="menu-btn">Committee</Link>
         <Link href="/documents" className="menu-btn">Documents</Link>
         <Link href="/contact" className="menu-btn">Contact</Link>
+        <Link href="/residents" className="menu-btn">Residents</Link>
+        <Link href="/maintenance" className="menu-btn">Report Issue</Link>
+        <Link href="/maintenance-list" className="menu-btn">View Issues</Link>
       </nav>
 
       <main className="main">
